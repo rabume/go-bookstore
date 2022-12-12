@@ -1,11 +1,8 @@
 SHELL := bash
 
-help:
-	@echo Help
+.DEFAULT_GOAL := build
 
-.DEFAULT_GOAL := help
-
-.PHONY: build
+.PHONY: build rebuild clear
 
 build:
 	@docker-compose up -d --build
